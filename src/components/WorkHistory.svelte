@@ -103,6 +103,7 @@
 
   <div class="nc-images">
     <a
+      class="nc-feature"
       href="https://youtu.be/ExtnyNz743k?t=2521"
       target="_blank"
       rel="noreferrer"
@@ -117,6 +118,7 @@
       </figure>
     </a>
     <a
+      class="nc-feature"
       href="https://www.youtube.com/watch?v=kIdd50GOFME"
       target="_blank"
       rel="noreferrer"
@@ -133,6 +135,7 @@
       </figure>
     </a>
     <a
+      class="nc-feature"
       href="https://www.youtube.com/watch?v=Yj_rlbTgJRA"
       target="_blank"
       rel="noreferrer"
@@ -148,6 +151,13 @@
         </figcaption>
       </figure>
     </a>
+
+    <div class="nc-feature">
+      <figure>
+        <img src="images/passport.jpg" alt="Screenshot of a log in page" />
+        <figcaption>NC Passport - Internal Dev Project</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -169,9 +179,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    img {
-      width: 400px;
-    }
+  }
+
+  .nc-feature {
+    width: 700px;
+  }
+  img {
+    width: 100%;
   }
 
   details {

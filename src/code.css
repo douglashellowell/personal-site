@@ -11,6 +11,7 @@
 code,
 pre {
   text-align: left;
+  font-size: inherit;
 }
 
 code[class*='language-'],

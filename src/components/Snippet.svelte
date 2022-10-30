@@ -3,7 +3,7 @@
   export let language: string;
   export let snippet: string;
   const snippetLanguage = `language-${language}`;
-  const trimmedSnippet = snippet.trim();
+  $: trimmedSnippet = snippet.trim();
 </script>
 
 <pre class={snippetLanguage}><code class={snippetLanguage}

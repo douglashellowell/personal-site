@@ -46,12 +46,14 @@ h1 {
 }
 
 #app {
+  width: 90vw;
   max-width: 950px;
 
   background: hsl(0, 0%, 96%);
   margin: 30px auto;
   padding: 2rem;
   text-align: center;
+  line-height: 1.7;
 
   box-shadow: 00px 0px 10px 10px rgba(9, 9, 9, 0.298);
 }
@@ -100,10 +102,11 @@ pre {
   border: 1px solid black;
 }
 
-code {
+.inline-code {
   background-color: rgb(241, 242, 242);
   color: rgb(235, 28, 36);
   padding: 2px 4px;
   border: 1px solid #dddbdb;
   border-radius: 5px;
+  font-size: 14px;
 }
