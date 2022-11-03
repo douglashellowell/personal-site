@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.6.0",
+    "markdown-it": "^13.0.1",
     "prismjs": "^1.29.0",
     "sass": "^1.55.0"
   }

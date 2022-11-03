@@ -1,6 +1,5 @@
 <script lang="ts">
   import confetti from 'canvas-confetti';
-  // import Prism from 'prismjs';
   import type { Fact } from '../types';
   import Snippet from './Snippet.svelte';
 
@@ -13,7 +12,7 @@
   }
   $: chosenFact = facts[factIndex % facts.length];
 
-  $: console.log(chosenFact);
+  // $: console.log(chosenFact);
 
   let canvas;
   let cannon = confetti.create(canvas, {

@@ -1,10 +1,13 @@
 <script lang="ts">
+  import MarkdownIt from 'markdown-it';
   import Prism from 'prismjs';
   import type { TechFact } from 'src/types';
   import { quintOut } from 'svelte/easing';
   import { slide } from 'svelte/transition';
   import FactCarousel from './FactCarousel.svelte';
   export let techRef;
+
+  const md = new MarkdownIt();
 
   import SectionTitle from './SectionTitle.svelte';
 
@@ -321,6 +324,12 @@ return (
             'javascript'
           )}</code></pre>
 `,
+        },
+        {
+          title: 'Cloning Children in React',
+          snippet: '',
+          description: `
+          `,
         },
       ],
     },

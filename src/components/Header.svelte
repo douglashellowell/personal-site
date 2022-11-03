@@ -14,7 +14,7 @@
       </li>
       <li>
         <a
-          href="https://github.com/douglashellowell"
+          href="https://www.linkedin.com/in/douglashellowell/"
           target="_blank"
           rel="noreferrer"
           title="linkedin"
