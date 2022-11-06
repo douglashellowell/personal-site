@@ -1,0 +1,30 @@
+## Generators
+
+```js
+function* createNumGenerator(start, end) {
+  while (start <= end) {
+    yield start;
+    start++;
+  }
+}
+
+console.log(createNumGenerator); // [GeneratorFunction: createNumGenerator]
+
+const oneToFiveGenerator = createNumGenerator(1, 5);
+
+console.log(oneToFiveGenerator); // Object [Generator] {}
+```
+
+Notice how i'm using `function*` right at the start there? This is a `GeneratorFunction`. Calling this function returns a Generator Object!
+
+This object can be iterated over and will call the function on each iteration.
+
+We can call the next value in the iteration manually by using the `.next()` method.
+
+```js
+const firstResult = oneToFiveGenerator.next();
+
+console.log(firstResult); // { value: 1, done: false }
+```
+
+The strange difference between the way this generator executes and the way normal functions run is that it will execute line-by-line until it reaches a `yield` keyword. At this point it will pause the execution and yield (give back) a results object to wherever it was called. When we iterate again the code will resume from the yield keyword and execute until it reaches the next one.

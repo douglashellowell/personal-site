@@ -1,0 +1,16 @@
+## Template literal types
+
+```ts
+type Colour = 'red' | 'blue' | 'green' | 'neutral';
+type Character = 'fox' | 'falco' | 'ness' | 'peach' | 'cpt.falcon';
+
+type SelectableCharacter = `${Character}_${Colour}`;
+```
+
+You can create an exponential amount of types by
+using a syntax identical to string template literals!
+The above code generates **twenty types**!
+
+```ts
+type SelectableCharacter = "fox_red" | "fox_blue" | "fox_green" | "fox_neutral" | "falco_red" | "falco_blue" | "falco_green" | "falco_neutral" | "ness_red" | "ness_blue" | "ness_green" | "ness_neutral" | ... 7 more ... | "cpt.falcon_neutral";
+```

@@ -1,0 +1,19 @@
+## Iterable/Iterator protocol
+
+```js
+const tutor = 'doug';
+
+const tutorIterator = tutor[Symbol.iterator](); // invoke it!
+
+console.log(tutorIterator); // Object [String Iterator] {}
+
+console.log(tutorIterator.next()); // { value: 'd', done: false }
+console.log(tutorIterator.next()); // { value: 'o', done: false }
+console.log(tutorIterator.next()); // { value: 'u', done: false }
+console.log(tutorIterator.next()); // { value: 'g', done: false }
+console.log(tutorIterator.next()); // { value: undefined, done: true }
+```
+
+Some data types in JavaScript are iterable by nature - e.g `Array`, `TypedArray`, `Map`, `Set`, `NodeList` among some others . In order to be iterable an object must adhere to the <a href="https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol" target="_blank" rel="noreferrer"> iterator protocol</a> _(meaning they must implement the `@@iterator` method)_.
+
+In the above example we're creating a "String Iterator" which has `.next()`, `.return()` and `.throw()` methods. These methods are used under the hood by language features like the `for...of` loop and the spread operator!

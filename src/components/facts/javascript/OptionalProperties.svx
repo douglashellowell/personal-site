@@ -1,0 +1,10 @@
+## Optional properties
+
+```js
+const dougsObj = {
+  ...(true && { addMe: 'hello!' }),
+  ...(false && { ignoreMe: 'shh!' }),
+};
+```
+
+While it's arguably not the _most_ readable syntax you can optionally add properties to an object using the above syntax!

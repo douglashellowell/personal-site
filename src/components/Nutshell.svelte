@@ -75,6 +75,17 @@
 </section>
 
 <style lang="scss">
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  #feature-prev {
+    display: inline;
+
+    float: left;
+  }
+
   section {
     border-radius: 1rem;
     background: hsl(233, 50%, 90%);
@@ -87,7 +98,7 @@
     flex-direction: column-reverse;
   }
   .features-container {
-    height: 150px;
+    height: 200px;
     /* border: 1px solid grey; */
     display: flex;
     justify-content: center;

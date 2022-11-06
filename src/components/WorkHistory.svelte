@@ -1,7 +1,12 @@
-<section>
-  <h2>Previous Employment</h2>
+<script>
+  import SectionTitle from './SectionTitle.svelte';
+</script>
 
-  <h3>Northcoders</h3>
+<section>
+  <!-- <h2>Previous Employment</h2> -->
+  <SectionTitle>Previous Employment</SectionTitle>
+
+  <h3>Northcoders <span>:: Software Engineer and Seminar Lead</span></h3>
   <a
     id="northcoders-link"
     href="https://northcoders.com/"
@@ -10,14 +15,6 @@
   >
     northcoders.com
   </a>
-  <p>
-    A tech training organisation that offers a 13-week Developer Pathway
-    designed to take students from knowing the basic concepts surrounding
-    programming to being ready for their first job as a junior developer in 13
-    weeks. Other products include focused 'language tracks' that introduce
-    graduates into alternative in-demand technologies like DevOps/Cloud, Go, C#,
-    TypeScript
-  </p>
 
   <details>
     <summary>Main duties</summary>
@@ -26,14 +23,17 @@
       <ul>
         <li>Delivering lectures and seminars</li>
         <li>Maintaining the curriculum</li>
-        <li>Student and staff management</li>
+        <li>Student and staff administration/management</li>
+        <li>Research Tech industry trends</li>
+        <li>Spiking new technologies</li>
       </ul>
       <h4>Internal Dev Team</h4>
       <ul>
+        <li>Agile workflow</li>
         <li>Developing to a brief</li>
         <li>Maintaining a live codebase</li>
         <li>Adhering to enforced style guidelines</li>
-        <li>Onboarding new devs</li>
+        <li>Onboarding junior devs</li>
       </ul>
     </div>
   </details>
@@ -69,6 +69,15 @@
       </ul>
     </div>
   </details>
+
+  <p>
+    Northcoders is a tech training organisation that offers a 13-week Developer
+    Pathway course designed to take students from knowing basic programming
+    concepts to being ready for their first job as a junior developer in 13
+    weeks. Other products include focused 'language tracks' that introduce
+    graduates into alternative in-demand technologies like DevOps/Cloud, Go, C#,
+    TypeScript
+  </p>
 
   <p>
     I joined the Northcoders classroom team as a Junior Software Engineer and
@@ -166,7 +175,8 @@
     display: inline;
   }
 
-  i {
+  i,
+  span {
     color: hsl(208, 17%, 50%);
   }
 

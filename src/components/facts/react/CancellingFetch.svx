@@ -1,0 +1,25 @@
+## Cancelling fetch requests
+
+```jsx
+const Example = () => {
+  useEffect(() => {
+    const cancellationToken = new AbortController();
+    const signal = cancellationToken.signal;
+    fetch('api.hellowell.example', { signal: signal })
+      .then((res) => res.json())
+      .then((apiData) => {
+        // do stuff with data here...
+      });
+
+    return () => cancellationToken.abort();
+  }, []);
+
+  return <div>{/* markup here... */}</div>;
+};
+```
+
+When we make api calls in a `useEffect` the promise might resolve after the component has unmounted / we've left the page (more likely with slow connections).
+Or perhaps we're fetching with a parameter and making lots of different requests rapid fire - this would trigger multiple setStates and the content rendered might look like it's desperately trying to catch up 😩.
+
+We can use an `AbortController` to pass a `signal` to our `fetch` and cancel the request on unmount!
+A returned function from a useEffect is triggered when the component is unmounted (removed from the page). This is useful for running “cleanup operations like we have here!`,

@@ -1,0 +1,47 @@
+## HSL
+
+Okay so this 'fun-fact' might be slightly more my own opinion... but it really helped me so here it is!
+
+In CSS we can apply colour to HTML elements using any of the following valid colour types.
+
+1. [Named-color](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color) : `black`, `yellow` (or my fave `tomato` 🍅)
+2. [Hexadecimal color](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) : `#ffef79`
+3. [Red/Green/Blue: RGB](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb) : `rgb(126, 227, 255)`
+4. [Hue/Whiteness/Blackness: HWB](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb) : `hwb(190 30% 30%)`
+5. [Hue/Saturation/Lightness: HSL](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl) : `hsl(225, 90%, 60%)`
+
+> All but the named colours have an optional alpha channel (transparency) variation too!
+
+> more recently introduced in [**CSS Color 4**](https://www.w3.org/TR/css-color-4/) are `lch()` and `lab()` but i won't go into those right now.
+
+The problem I have with the first 4 in that list is they are hard to make sense of and therefore hard to work quickly with.
+
+**Named colours** has the narrowest range of colours, no fine-tuning and no option for transparency. The names, while charming, can be hard to remember too 🤔
+
+**Hexadecimal** is difficult to impossible to parse at a glance (thank goodness for VSCodes colour previews) 🥴
+
+**RGB** and **HWB** have logical parameters but in order create shades of the same hue multiple parameters must be adjusted 😴
+
+<img src="images/facts/hsl1.jpg" />
+
+**HSL** on the other hand makes it trivial to create a nice gradient and match colours 🤩🎉
+
+Checkout how i've styled this `<blockquote>` 👇👇
+
+> I am a `<blockquote>` tag!
+
+The whacky background (visible on desktop) has my theme colours, grabbing the lighter red, keeping the hue (`359deg`) and saturation (`57%`) and changing **only** the lightness value quickly gives us two colours that perfectly compliment the pages theme.
+
+<img src="images/facts/hsl3.jpg" />
+
+In my experience using this approach it's not only quicker and easier but is also a far more accurate way to pick complementing colours!
+
+<img src="images/facts/hsl2.jpg" />
+
+<style>
+  img {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+</style>

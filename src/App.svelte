@@ -3,7 +3,7 @@
   import GroovyText from './components/GroovyText.svelte';
   import Header from './components/Header.svelte';
   import Nutshell from './components/Nutshell.svelte';
-  import Tech from './components/Tech.svelte';
+  import LearnSomethingNew from './components/LearnSomethingNew.svelte';
   import WorkHistory from './components/WorkHistory.svelte';
 
   let techRef;
@@ -15,7 +15,7 @@
   <Nutshell />
   <GroovyText {techRef} />
   <WorkHistory />
-  <Tech bind:techRef />
+  <LearnSomethingNew bind:techRef />
 </main>
 
 <style>

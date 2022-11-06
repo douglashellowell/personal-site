@@ -14,6 +14,16 @@ pre {
   font-size: inherit;
 }
 
+code:not([class*='language-']) {
+  background-color: rgb(241, 242, 242);
+  color: rgb(235, 28, 36);
+  padding: 2px 4px;
+  border: 1px solid #dddbdb;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 0 3px;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   color: #ebdbb2; /* fg1 / fg */

@@ -1,9 +1,7 @@
 <script lang="ts">
   import confetti from 'canvas-confetti';
-  import type { Fact } from '../types';
-  import Snippet from './Snippet.svelte';
+  export let facts;
 
-  export let facts: Fact[];
   let factIndex = 0;
   let factScrollBox: HTMLElement;
   function nextFact() {
@@ -11,8 +9,6 @@
     factScrollBox.scrollTo({ top: 0 });
   }
   $: chosenFact = facts[factIndex % facts.length];
-
-  // $: console.log(chosenFact);
 
   let canvas;
   let cannon = confetti.create(canvas, {
@@ -31,10 +27,10 @@
   }
 </script>
 
-<h3>{chosenFact.title}</h3>
+<!-- <h3>{chosenFact.title}</h3> -->
+
 <div class="fact" bind:this={factScrollBox}>
-  <Snippet language="javascript" snippet={chosenFact.snippet} />
-  <p>{@html chosenFact.description}</p>
+  <svelte:component this={chosenFact} />
 </div>
 <canvas bind:this={canvas} />
 <div class="sticky-btns">
@@ -71,10 +67,15 @@
     background: white;
     -webkit-box-shadow: inset 0px 5px 15px 0px hsla(0, 0%, 0%, 0.182);
     box-shadow: inset 0px -5px 15px 0px hsla(0, 0%, 0%, 0.182);
-    max-height: 400px;
+    height: 400px;
     overflow-y: scroll;
     border: 1px solid black;
     border-bottom: none;
+
+    & :global(h2) {
+      color: #9d2a2c;
+      border-bottom: 4px solid #9d2a2c;
+    }
   }
 
   .sticky-btns {
