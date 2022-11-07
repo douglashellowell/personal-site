@@ -84,7 +84,7 @@
     border: 1px solid black;
     border-top: none;
 
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 8px 8px;
     overflow: hidden;
 
     & button {

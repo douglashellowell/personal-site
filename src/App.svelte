@@ -5,6 +5,8 @@
   import Nutshell from './components/Nutshell.svelte';
   import LearnSomethingNew from './components/LearnSomethingNew.svelte';
   import WorkHistory from './components/WorkHistory.svelte';
+  import BuiltWith from './components/BuiltWith.svelte';
+  import TechStack from './components/TechStack.svelte';
 
   let techRef;
 </script>
@@ -14,8 +16,10 @@
   <About />
   <Nutshell />
   <GroovyText {techRef} />
+  <TechStack />
   <WorkHistory />
   <LearnSomethingNew bind:techRef />
+  <BuiltWith />
 </main>
 
 <style>

@@ -19,7 +19,7 @@
     {
       title: 'I have my finger on the pulse',
       description:
-        'I love using new tech! I keep myself up to date with the latest',
+        "I love using new tech! I keep myself up to date with the latest tech (and give most the ol 'Hello World' test drive)",
     },
     {
       title: 'I am an A11Y',

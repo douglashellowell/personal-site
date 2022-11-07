@@ -23,7 +23,7 @@
     { lang: 'CSS', facts: [...facts.css] },
   ];
 
-  let openIndex: number | null = null;
+  let openIndex: number | null = 1;
   function setOpenIndex(clickedIndex: number) {
     if (clickedIndex === openIndex) {
       openIndex = null;

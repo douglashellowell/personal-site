@@ -8,7 +8,7 @@
 </script>
 
 <button on:click={scrollToTech} on:keydown={scrollToTech}>
-  <p>Click here or scroll to "Tech" to learn something new!</p>
+  <p>Click here to learn something new!</p>
 </button>
 
 <style>

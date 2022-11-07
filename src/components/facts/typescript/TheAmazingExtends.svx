@@ -1,0 +1,126 @@
+## The Amazing <code class='title-extends'>extends</code>
+
+Developers with experience of the OOP side of JavaScript/TypeScript will be familiar with the `extends` keyword.
+
+In short it is used to create a subclass of a superclass, inheriting all public properties and establishing the prototypal chain.
+
+```ts
+class Hound {
+  tail = 'waggly';
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+// 💡 here it is!
+class Pup extends Hound {
+  constructor(name: string) {
+    super(name);
+  }
+}
+
+const doggo = new Pup('ruby');
+
+doggo.name; // 'ruby'
+doggo.tail; // 'waggly'
+```
+
+> `Pup` extends `Hound`. Creating instance of `Pup` will call the super constructor - thus inheriting properties from `Hound`.
+
+> 💡: The `constructor` in `Pup` is actually optional - if removed the `super` will still be called with all parameters implicitly! Nice!
+
+The `extends` keyword also exists in the type-level!
+
+The first usage, with `interface`s, feels very familiar to the usage with classes. An `interface` that `extends` another inherits its shape.
+
+```ts
+interface ISittable {
+  relax(): void;
+}
+
+interface IHoldable {
+  holdCup(): void;
+}
+
+interface IDeluxe extends ISittable, IHoldable {
+  adjust(): void;
+}
+
+class Chair implements IDeluxe {
+  // must implement:
+  // adjust()
+  // relax()
+  // holdCup()
+}
+```
+
+Here's where things get really fun.
+
+When creating a **generic** we can use the `extends` keyword to tell the type-system that the generic must be a sub-type of a specific type.
+
+```ts
+type Nums = [1, 2, 3];
+type FirstElement<T extends any[]> = T[0];
+
+const hello: FirstElement<Nums> = 1;
+```
+
+> The type passed to `FirstElement` _**must**_ be an Array
+
+In a sense we are still getting similar behaviour to before. You could think of `T` 'inheriting' the properties of a generic `any[]` - we couldn't access the `[0]` index if we weren't!
+
+The most interesting (and hardest to get your head around) usage of `expect` in type-level typescript comes when we start creating **_conditional types_**... _(i hope you don't mind ternary operators!)_
+
+First consider `X extends Y` as a conditional statement. It could be true or false. Then apply the if/else logic of ternary operators!
+
+When a type is given to the generic the logic is performed and the result is the type given to the variable!
+
+```ts
+type Activity<Weather> = Weather extends 'snowy'
+  ? 'lets go skiing!'
+  : 'lets go hiking!';
+
+const monday: Activity<'snowy'> = 'lets go skiing!';
+const tuesday: Activity<'sunny'> = 'lets go hiking!';
+```
+
+~~This means we can do something really stupid like:~~
+Taking this to it's logical conclusion we can even create logic gates right here in the type-level of Typescript!
+
+```ts
+type AND<A extends boolean, B extends boolean> = A extends true
+  ? B extends true
+    ? true
+    : false
+  : false;
+let andTT: AND<true, true>; //  true
+let andTF: AND<true, false>; //  false
+let andFT: AND<false, true>; // false
+let andFF: AND<false, false>; // false
+
+type OR<A extends boolean, B extends boolean> = A extends false
+  ? B extends false
+    ? false
+    : true
+  : true;
+let orTT: OR<true, true>; // true
+let orTF: OR<true, false>; // true
+let orFT: OR<false, true>; // true
+let orFF: OR<false, false>; // false
+```
+
+As a closing note there's also a very handy `never` keyword that comes in useful when creating conditional types - it acts as a dead end! If the result of a conditional type hits a `never` it will cause a type error
+
+```ts
+type MustBeDog<Animal> = Animal extends 'dog' ? Animal : never;
+
+const pup: MustBeDog<'dog'> = 'dog';
+```
+
+<style>
+  .title-extends {
+    font-size: 1rem;
+  }
+</style>
