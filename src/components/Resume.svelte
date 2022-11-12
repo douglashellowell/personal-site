@@ -8,12 +8,17 @@
 
   <div>
     <a
+      target="_blank"
+      rel="noreferrer"
       href="https://docs.google.com/document/d/1vwO8z-mHtrvf66rdTbcJx4e-5CQ-44acxxl5_1GQbI8/edit?usp=sharing"
       >View on Google Docs
       <i class="fa-solid fa-eye" />
     </a>
     <a
-      href="https://docs.google.com/document/d/1vwO8z-mHtrvf66rdTbcJx4e-5CQ-44acxxl5_1GQbI8/edit?usp=sharing"
+      target="_blank"
+      rel="noreferrer"
+      download
+      href="documents/DouglasHellowell.pdf"
       >Download
       <i class="fa-solid fa-download" />
     </a>
