@@ -6,7 +6,7 @@
     <h3>Resumé</h3>
   </div>
 
-  <div>
+  <div class="resume-btn-container">
     <a
       target="_blank"
       rel="noreferrer"
@@ -55,5 +55,21 @@
 
   h3 {
     display: inline;
+  }
+
+  @media only screen and (max-width: 590px) {
+    section {
+      flex-direction: column;
+    }
+
+    .resume-btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    a {
+      margin: 10px 0;
+    }
   }
 </style>
