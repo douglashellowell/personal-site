@@ -181,6 +181,7 @@
     >
       <figure>
         <img
+          loading="lazy"
           src="images/lightningTalk1.jpg"
           alt="A Youtube screenshot of a lightning talk presentation on the web audio API, the presenter looks very excited"
         />
@@ -196,6 +197,7 @@
     >
       <figure>
         <img
+          loading="lazy"
           src="images/lightningTalk2.jpg"
           alt="A Youtube screenshot of a lightning talk presentation, the presenter is buzzing with anticipation"
         />
@@ -213,6 +215,7 @@
     >
       <figure>
         <img
+          loading="lazy"
           src="images/anonymask.jpg"
           alt="A Youtube screenshot of my graduation project"
         />
@@ -224,14 +227,125 @@
 
     <div class="nc-feature">
       <figure>
-        <img src="images/passport.jpg" alt="Screenshot of a log in page" />
+        <img
+          loading="lazy"
+          src="images/passport.jpg"
+          alt="Screenshot of a log in page"
+        />
         <figcaption>NC Passport - Internal Dev Project</figcaption>
       </figure>
     </div>
   </div>
+
+  <h3>i-SOL8 <span>:: Freelance Web Developer</span></h3>
+
+  <a
+    id="isol8-link"
+    href="https://i-sol8.com/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    i-sol8.com
+  </a>
+
+  <details>
+    <summary>Tech Stack</summary>
+    <div class="details-content">
+      <ul>
+        <li>Svelte</li>
+        <li>Sapper</li>
+        <li>nodemailer</li>
+        <li>CSS</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+  </details>
+
+  <p>
+    Built entire site from scratch to a design brief and completed updates on
+    request.
+  </p>
+
+  <a
+    href="https://i-sol8.com/"
+    target="_blank"
+    rel="noreferrer"
+    title="i-SOL8 landing page"
+  >
+    <figure>
+      <img
+        loading="lazy"
+        src="images/isol81.jpg"
+        alt="A Youtube screenshot of a lightning talk presentation, the presenter is buzzing with anticipation"
+      />
+      <figcaption>I-sol8 engineering landing page</figcaption>
+    </figure>
+  </a>
+</section>
+
+<section>
+  <SectionTitle>Personal Projects</SectionTitle>
+
+  <h3>Peppy <span>:: Super Smash Bros Melee Scoreboarding app</span></h3>
+
+  <a
+    id="peppy-link"
+    href="https://github.com/douglashellowell/Peppy"
+    target="_blank"
+    rel="noreferrer"
+  >
+    github link
+  </a>
+
+  <details>
+    <summary>Tech Stack</summary>
+    <div class="details-content">
+      <ul>
+        <li>Electron</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>NodeJS</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="peppy-img-container">
+    <img
+      loading="lazy"
+      class="peppy-img"
+      src="images/peppy.jpg"
+      alt="Super smash bros characters with player name and score controls"
+    />
+    <img
+      loading="lazy"
+      class="peppy-img"
+      src="images/peppy2.jpg"
+      alt="Doug sitting at the streamer desk in Manchester, England"
+    />
+  </div>
+
+  <blockquote>
+    This was my first ever project and is <b>long overdue</b> a refactor
+    <span aria-hidden="true">🚧👷‍♂️🚧</span>
+  </blockquote>
+  <p>
+    A cross-platform electron app that allows streamers to set characters,
+    player names, scores and round-names from one interface without the need for
+    an internet connection. The application interacts with local files that
+    update the UI of an OpenBroadcastSoftware stream
+  </p>
 </section>
 
 <style lang="scss">
+  .peppy-img-container {
+    display: flex;
+
+    & img {
+      width: 45%;
+    }
+  }
+
   #northcoders-link {
     display: inline;
   }
@@ -253,10 +367,18 @@
   }
 
   .nc-feature {
-    width: 700px;
+    width: 49%;
+    min-width: 400px;
   }
   img {
     width: 100%;
+
+    box-shadow: 0px 0px 10px 0px rgba(9, 9, 9, 0.198);
+  }
+
+  .peppy-img {
+    width: 400px;
+    margin: auto;
   }
 
   details {

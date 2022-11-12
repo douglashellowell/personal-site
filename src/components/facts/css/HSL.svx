@@ -22,7 +22,7 @@ The problem I have with the first 4 in that list is they are hard to make sense 
 
 **RGB** and **HWB** have logical parameters but in order create shades of the same hue multiple parameters must be adjusted 😴
 
-<img src="images/facts/hsl1.jpg" />
+<img src="images/facts/hsl1.jpg" alt="CSS snippet showing named colours, hex, rgb and hwb values"/>
 
 **HSL** on the other hand makes it trivial to create a nice gradient and match colours 🤩🎉
 
@@ -32,11 +32,11 @@ Checkout how i've styled this `<blockquote>` 👇👇
 
 The whacky background (visible on desktop) has my theme colours, grabbing the lighter red, keeping the hue (`359deg`) and saturation (`57%`) and changing **only** the lightness value quickly gives us two colours that perfectly compliment the pages theme.
 
-<img src="images/facts/hsl3.jpg" />
+<img src="images/facts/hsl3.jpg" alt="three colours made with hsl"/>
 
 In my experience using this approach it's not only quicker and easier but is also a far more accurate way to pick complementing colours!
 
-<img src="images/facts/hsl2.jpg" />
+<img src="images/facts/hsl2.jpg" alt='a rainbow made with hsl and a red and blue colourscheme' />
 
 <style>
   img {

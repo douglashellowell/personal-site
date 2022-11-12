@@ -147,12 +147,9 @@ pre {
 }
 
 blockquote {
+  text-align: left;
   font-style: italic;
 
-  /* colour from bg-pattern */
-  background: hsl(359, 57%, 39%);
-
-  /* lightened to give softer, non-demanding appearance */
   border-left: 5px solid hsl(359, 57%, 59%);
   background: hsl(359, 57%, 97%);
 

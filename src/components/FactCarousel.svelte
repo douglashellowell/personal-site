@@ -53,12 +53,12 @@
     position: absolute;
   }
 
-  h3 {
-    background: hsl(359, 58%, 39%);
-    padding: 1rem;
-    color: white;
-    margin: 0;
-  }
+  // h3 {
+  //   background: hsl(359, 58%, 39%);
+  //   padding: 1rem;
+  //   color: white;
+  //   margin: 0;
+  // }
 
   .fact {
     text-align: left;

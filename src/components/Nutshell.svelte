@@ -10,7 +10,7 @@
     {
       title: 'I love to code',
       description:
-        "I have always had a passion for technology <i>(I've installed linux on almost every device i've owned - Wii, DS)</i>. I love to talk about code - let's have a chat!",
+        "I've always had a passion for technology <i>(I've installed linux on almost every device i've owned - Wii, DS)</i>. I love to talk about code - let's have a chat!",
     },
     {
       title: 'I think about the user',
@@ -19,7 +19,7 @@
     {
       title: 'I have my finger on the pulse',
       description:
-        "I love using new tech! I keep myself up to date with the latest tech (and give most the ol 'Hello World' test drive)",
+        "I love using new tech! I keep myself up to date with the latest tech (and give most the ol' 'Hello World' test drive)",
     },
     {
       title: 'I am an A11Y',
@@ -29,6 +29,11 @@
     {
       title: 'I am a developing developer',
       description: 'I thrive in environments where I can learn and teach',
+    },
+    {
+      title: 'I play super smash bros melee competitively!',
+      description:
+        'I organised and ran two different tournament series in the UK, i plan to compete in BC!',
     },
   ];
 
@@ -57,7 +62,7 @@
       on:click={() => incIndex(1)}
       aria-label="previous"
     >
-      &gt;
+      <i class="fa-solid fa-circle-right" />
     </button>
     <div class="features-container">
       {#if isShowing}
@@ -80,11 +85,11 @@
     margin: 0;
   }
 
-  #feature-prev {
-    display: inline;
+  // #feature-prev {
+  //   display: inline;
 
-    float: left;
-  }
+  //   float: left;
+  // }
 
   section {
     border-radius: 1rem;
@@ -102,7 +107,7 @@
     /* border: 1px solid grey; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     padding: 0 2rem;
   }
 
@@ -115,5 +120,13 @@
   }
   #feature-next:hover ~ .features-container #feature {
     transform: translateX(-10px);
+  }
+
+  button {
+    background: hsl(233, 50%, 97%);
+
+    &:hover {
+      background: hsl(233, 50%, 80%);
+    }
   }
 </style>
